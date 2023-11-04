@@ -10,7 +10,7 @@ class AppBD():
             connection = sqlite3.connect('database.db')
             return connection
         except sqlite3.Error as error:
-            print("Falha ao se conectar ao banco de dados.", error)
+            print("Failed to connect to database.", error)
             return None
 
     def create_table(self):
@@ -27,9 +27,9 @@ class AppBD():
             cursor = self.connection.cursor()    
             cursor.execute(create_table_query)
             self.connection.commit()
-            print("Tabela criada com sucesso.")
+            print("Table created successfully.")
         except sqlite3.Error as error:
-            print("Falha ao criar tabela.", error)
+            print("Failed to create table.", error)
 
     def insert_data(self, name, price, date, payment, description, status):
         insert_query = """INSERT INTO products(name, price, date, payment, description, status) VALUES(?, ?, ?, ?, ?, ?);"""
@@ -37,9 +37,9 @@ class AppBD():
             cursor = self.connection.cursor()
             cursor.execute(insert_query, (name, price, date, payment, description, status))
             self.connection.commit()
-            print("Produto inserido com sucesso.")
+            print("Product inserted successfully.")
         except sqlite3.Error as error:
-            print("Falha ao inserir dados.", error)
+            print("Failed to enter data.", error)
 
     def select_all_products(self):
         select_query = "SELECT * FROM products"
@@ -49,7 +49,7 @@ class AppBD():
             cursor.execute(select_query)
             products = cursor.fetchall()
         except sqlite3.Error as error:
-            print("Falha ao retornar produtos.", error)
+            print("Failed to return products.", error)
         return products
 
     def update_products(self, products_id, name, price, date, payment, description, status):
@@ -58,9 +58,9 @@ class AppBD():
             cursor = self.connection.cursor()
             cursor.execute(update_query, (name, price, date, payment, description, status, products_id))
             self.connection.commit()
-            print("Produto atualizado com sucesso.")
+            print("Product updated successfully.")
         except sqlite3.Error as error:
-            print("Falha ao atualizar produto.", error)
+            print("Failed to update product.", error)
 
     def delete_products(self, products_id):
         delete_query = "DELETE FROM products WHERE id = ?"
@@ -68,6 +68,6 @@ class AppBD():
             cursor = self.connection.cursor()
             cursor.execute(delete_query, (products_id,))
             self.connection.commit()
-            print("Produto deletado com sucesso.")
+            print("Product deleted successfully.")
         except sqlite3.Error as error:
-            print("Falha ao deletar produto.", error)
+            print("Failed to delete product.", error)
