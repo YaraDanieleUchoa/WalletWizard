@@ -2,6 +2,7 @@
 
 O WalletWizard é uma aplicação simples para rastreamento de despesas, construída em Python usando o framework Tkinter. Esta aplicação oferece uma interface gráfica intuitiva para gerenciar suas despesas diárias. Vamos dar uma olhada em alguns dos recursos principais:
 
+![image](https://github.com/YaraDanieleUchoa/WalletWizard/assets/127636672/f90ab810-c3bc-4d8b-9648-165aebec631e)
 **Recursos:**
 
 1. **Interface Atrativa:**
@@ -38,4 +39,4 @@ O WalletWizard é uma aplicação simples para rastreamento de despesas, constru
 
 WalletWizard é a escolha perfeita para quem busca uma maneira fácil e eficaz de controlar suas despesas diárias. Mantenha seu orçamento sob controle com esta ferramenta intuitiva e estilizada.
 
-![image](https://github.com/YaraDanieleUchoa/WalletWizard/assets/127636672/f90ab810-c3bc-4d8b-9648-165aebec631e)
+
